@@ -1,9 +1,14 @@
 :root {
   --c-gray: #cccccc;
-  --c-primary: #f55eb0;
+  --c-primary: #f55e9c;
   --c-text: #2b2b2b;
 
   --bgc-overlay: rgba(0, 0, 0, 0.5);
+
+  --pdng-sm: 12px;
+  --pdng-md: 24px;
+  --pdng-lg: 48px;
+  --pdng-xl: 64px;
 
   --w-pc: 500px;
 
@@ -36,68 +41,13 @@ body {
   }
 }
 
-.l-page {
-  .l-page__inner {
-    background-color: #ffffff;
-    box-shadow: 0 0 0.1rem #333333;
-    display: flex block;
-    flex-direction: column;
-    gap: 0;
-    height: 100%;
-    width: min(100%, var(--w-pc));
-    margin-inline: auto;
-    min-height: 100svh;
-    position: relative;
-    z-index: 1;
-  }
-}
-
-.l-page-main {
-  flex: 1;
-
-  .l-page-main__inner {
-    padding: 1.6rem;
-  }
-}
-.l-page-header {
-  position: sticky;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 10;
-
-  .l-page-header__inner {
-    background-color: #ffffff;
-    padding: 1.6rem;
-    padding-top: calc(1.6rem + env(safe-area-inset-top));
-
-    h1#page-title {
-      font-size: 2rem;
-      font-weight: 700;
-      text-align: center;
-    }
-  }
-}
-.l-page-footer {
-  position: sticky;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  z-index: 10;
-
-  .l-page-footer__inner {
-    padding: 1.6rem;
-    padding-bottom: calc(1.6rem + env(safe-area-inset-bottom));
-  }
-}
-
 .c-icon {
   direction: ltr;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   font-family: "Material Symbols Outlined";
-  font-size: max(1em, var(--sz-icon, 2.4rem));
+  font-size: 1.25em;
   font-style: normal;
   font-weight: 400;
   letter-spacing: normal;
@@ -115,10 +65,38 @@ body {
   font-variation-settings: "FILL" 1;
 }
 
-.l-grid {
-  .l-grid__inner {
+.l-page {
+  .l-page__inner {
+    background-color: #ffffff;
+    box-shadow: 0 0 0.1rem #333333;
+    display: flex block;
+    flex-direction: column;
+    gap: 0;
+    height: 100%;
+    width: min(100%, var(--w-pc));
+    margin-inline: auto;
+    min-height: 100svh;
+    position: relative;
+    z-index: 1;
+  }
+}
+.l-page-content {
+  flex: 1;
+  .l-page-content__inner {
+    min-height: 100svh;
+  }
+}
+.l-page-footer {
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+.l-section {
+  .l-section__inner {
     display: grid block;
-    gap: 1.6rem;
-    grid-template-columns: repeat(2, 1fr);
+    gap: var(--pdng-sm);
+    padding: var(--pdng-md);
   }
 }

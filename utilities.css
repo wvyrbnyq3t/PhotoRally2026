@@ -1,3 +1,30 @@
-.u--w-full {
-  width: 100%;
+.u-color--primary {
+  color: var(--c-primary);
+}
+
+.u-fs--sm {
+  font-size: 0.75em;
+}
+.u-fs--md {
+  font-size: 1em;
+}
+.u-fs--lg {
+  font-size: 1.25em;
+}
+.u-fs--xl {
+  font-size: 1.5em;
+}
+
+.u-lh--sm {
+  line-height: 1.25;
+}
+
+.u-text--left {
+  text-align: left;
+}
+.u-text--center {
+  text-align: center;
+}
+.u-text--right {
+  text-align: right;
 }
