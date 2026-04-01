@@ -23,6 +23,11 @@
     />
   </head>
   <body>
+    <div id="loading" class="l-loading">
+      <div class="l-loading__inner">
+        <div><div class="circle-dash-loader"></div></div>
+      </div>
+    </div>
     <div class="l-page">
       <div class="l-page__inner">
         <main class="l-page-content">
@@ -112,6 +117,7 @@
     <script>
       const buttonEntry = document.getElementById("buttonEntry");
       const entryFlg = localStorage.getItem("entryFlg");
+      const loading = document.getElementById("loading");
 
       if (entryFlg) {
         window.location.href = "index.html";
@@ -120,6 +126,7 @@
       buttonEntry.addEventListener("click", (e) => {
         e.preventDefault();
         buttonEntry.setAttribute("aria-disabled", "true");
+        loading.classList.add("is-active");
 
         fetch(
           "https://script.google.com/macros/s/AKfycbzjvnP5S_eONFQGYHcy2_mKEGcPopZB3W0KJPndsup7QiDtkha2Fjhnp6zuy8CVpXy5/exec"
@@ -136,6 +143,7 @@
                 "イベントへの参加が失敗しました。お手数ですが、もう一度やり直してください。"
               );
               buttonEntry.removeAttribute("aria-disabled");
+              loading.classList.remove("is-active");
             }
           });
       });
