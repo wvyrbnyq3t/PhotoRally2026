@@ -76,3 +76,14 @@
   gap: var(--pdng-sm);
   padding: var(--pdng-md);
 }
+
+.c-info-box {
+  .c-info-box__inner {
+    background-color: #fff0f5;
+    border-radius: 0.8rem;
+    display: grid block;
+    gap: var(--pdng-sm);
+    padding: var(--pdng-md);
+    text-align: center;
+  }
+}
