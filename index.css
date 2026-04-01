@@ -100,3 +100,9 @@ body {
     padding: var(--pdng-md);
   }
 }
+
+:where(*:has( > .c-icon)) {
+  display: inline-flex;
+  align-items: center;
+  gap: .5em;
+}
