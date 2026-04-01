@@ -29,16 +29,104 @@
           <div class="l-page-content__inner">
             <section class="l-section">
               <div class="l-section__inner">
-                <h1 class="u-text--center u-lh--sm u-color--primary">
-                  <span class="u-fs--sm">案内イベント</span>
-                  <br />
-                  フォトラリー
-                </h1>
-              </div>
-            </section>
-            <section class="l-section">
-              <div class="l-section__inner">
-                <p class="u-text--center">準備中...</p>
+                <a href="01.html" class="c-card c-card--horizontal">
+                  <div class="c-card__inner">
+                    <div class="c-card__image">
+                      <img src="./images/icon/1.png" alt="" />
+                    </div>
+                    <div class="c-card__content">
+                      <h3>法政大学　小金井キャンパス　正門</h3>
+                      <p>
+                        <span class="c-icon">map</span>
+                        正門
+                      </p>
+                    </div>
+                  </div>
+                </a>
+                <a href="02.html" class="c-card c-card--horizontal">
+                  <div class="c-card__inner">
+                    <div class="c-card__image">
+                      <img src="./images/icon/3.png" alt="" />
+                    </div>
+                    <div class="c-card__content">
+                      <h3>ニュートンの木</h3>
+                      <p>
+                        <span class="c-icon">map</span>
+                        管理棟周辺
+                      </p>
+                    </div>
+                  </div>
+                </a>
+                <a href="03.html" class="c-card c-card--horizontal">
+                  <div class="c-card__inner">
+                    <div class="c-card__image">
+                      <img src="./images/icon/4.png" alt="" />
+                    </div>
+                    <div class="c-card__content">
+                      <h3>中央館の時計</h3>
+                      <p>
+                        <span class="c-icon">map</span>
+                        中央館周辺
+                      </p>
+                    </div>
+                  </div>
+                </a>
+                <a href="04.html" class="c-card c-card--horizontal">
+                  <div class="c-card__inner">
+                    <div class="c-card__image">
+                      <img src="./images/icon/2.png" alt="" />
+                    </div>
+                    <div class="c-card__content">
+                      <h3>東館装飾</h3>
+                      <p>
+                        <span class="c-icon">map</span>
+                        東館1F
+                      </p>
+                    </div>
+                  </div>
+                </a>
+                <a href="05.html" class="c-card c-card--horizontal">
+                  <div class="c-card__inner">
+                    <div class="c-card__image">
+                      <img src="./images/icon/unknown.png" alt="" />
+                    </div>
+                    <div class="c-card__content">
+                      <h3>ステンドグラス装飾</h3>
+                      <p>
+                        <span class="c-icon">map</span>
+                        管理等 2F
+                      </p>
+                    </div>
+                  </div>
+                </a>
+                <a href="06.html" class="c-card c-card--horizontal">
+                  <div class="c-card__inner">
+                    <div class="c-card__image">
+                      <img src="./images/icon/5.png" alt="" />
+                    </div>
+                    <div class="c-card__content">
+                      <h3>交流イベント</h3>
+                      <p>
+                        <span class="c-icon">map</span>
+                        中庭　企画実行委員会ブース (雨天時：東館1F E113)
+                      </p>
+                    </div>
+                  </div>
+                </a>
+                <a href="07.html" class="c-card c-card--horizontal">
+                  <div class="c-card__inner">
+                    <div class="c-card__image">
+                      <img src="./images/icon/6.png" alt="" />
+                    </div>
+                    <div class="c-card__content">
+                      <h3>クイズ大会</h3>
+                      <p>
+                        <span class="c-icon">map</span>
+                        東館2F 体育館
+                      </p>
+                    </div>
+                  </div>
+                </a>
               </div>
             </section>
           </div>
@@ -63,5 +151,12 @@
       </div>
     </div>
     <script type="module" src="/src/main.tsx"></script>
+    <script>
+      const entryFlg = localStorage.getItem("entryFlg");
+
+      if (!entryFlg) {
+        window.location.href = "entry.html";
+      }
+    </script>
   </body>
 </html>

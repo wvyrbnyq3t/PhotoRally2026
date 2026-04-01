@@ -1,3 +1,12 @@
+.c-badge {
+  background-color: var(--c-primary);
+  border-radius: 99rem;
+  color: #ffffff;
+  margin-inline: auto;
+  padding: 0.25em 3em;
+  width: fit-content;
+}
+
 .c-button {
   border: 0.1rem solid transparent;
   border-radius: 99rem;
@@ -16,8 +25,54 @@
       opacity: 0.7;
     }
   }
+
+  &[aria-disabled="true"] {
+    cursor: not-allowed;
+  }
 }
 .c-button--primary {
   background-color: var(--c-primary);
   color: #ffffff;
+
+  &[aria-disabled="true"] {
+    background-color: var(--c-gray);
+  }
+}
+
+.p-htp-container {
+  h3 {
+    span {
+      background-color: var(--c-primary);
+      border-radius: 99rem;
+      color: #ffffff;
+      display: block;
+      height: 1em;
+      width: 1em;
+    }
+  }
+}
+
+.c-card {
+  .c-card__inner {
+    background-color: #ffffff;
+    box-shadow: 0 0 0.1rem #333333;
+    border-radius: 0.8rem;
+    display: grid block;
+    overflow: hidden;
+  }
+}
+.c-card--horizontal {
+  .c-card__inner {
+    grid-template-columns: auto 1fr;
+
+    .c-card__content {
+      gap: 0;
+    }
+  }
+}
+
+.c-card__content {
+  display: grid block;
+  gap: var(--pdng-sm);
+  padding: var(--pdng-md);
 }

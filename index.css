@@ -67,8 +67,7 @@ body {
 
 .l-page {
   .l-page__inner {
-    background-image: url("./images/bg.png");
-    background-position: center center;
+    background-color: #ffffff;
     box-shadow: 0 0 0.1rem #333333;
     display: flex block;
     flex-direction: column;
@@ -79,21 +78,6 @@ body {
     min-height: 100svh;
     position: relative;
     z-index: 1;
-
-    &::before {
-      background: linear-gradient(
-        180deg,
-        rgba(255, 255, 255, 0.7) 0%,
-        rgba(255, 255, 255, 0) 40%
-      );
-      content: "";
-      height: 100%;
-      width: 100%;
-      position: absolute;
-      top: 0;
-      left: 0;
-      z-index: -1;
-    }
   }
 }
 .l-page-content {
@@ -112,7 +96,7 @@ body {
 .l-section {
   .l-section__inner {
     display: grid block;
-    gap: var(--pdng-sm);
+    gap: var(--pdng-md);
     padding: var(--pdng-md);
   }
 }
