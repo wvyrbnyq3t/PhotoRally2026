@@ -63,7 +63,7 @@
 }
 .c-card--horizontal {
   .c-card__inner {
-    grid-template-columns: auto 1fr;
+    grid-template-columns: 10rem 1fr;
 
     .c-card__content {
       gap: 0;
