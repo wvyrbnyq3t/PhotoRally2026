@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>案内イベント | 新入生歓迎祭2026</title>
+    <!-- StyleSheets -->
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="utilities.css" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=LINE+Seed+JP:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Google Material Design -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+  </head>
+  <body>
+    <div class="l-page">
+      <div class="l-page__inner">
+        <main class="l-page-content">
+          <div class="l-page-content__inner">
+            <div class="l-section">
+              <div class="l-section__inner">
+                <h1 class="u-text--center u-color--primary">
+                  フォトラリーイベント
+                </h1>
+                <p>
+                  キャンパスを探検して、モバイルバッテリーやスタバカードなどの豪華景品をゲット！？
+                </p>
+              </div>
+            </div>
+            <div class="l-section">
+              <div class="l-section__inner">
+                <h2 class="c-badge">遊び方</h2>
+                <div class="c-card">
+                  <div class="c-card__inner">
+                    <img src="./images/howtoplay/step01.png" alt="" />
+                    <div class="c-card__content">
+                      <h3 class="c-card__title">
+                        STEP1 - 指定されたフォトスポットに行ってみよう！
+                      </h3>
+                      <p>合計 6 個のフォトスポットを巡ってみよう！</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="c-card">
+                  <div class="c-card__inner">
+                    <img src="./images/howtoplay/step02.png" alt="" />
+                    <div class="c-card__content">
+                      <h3 class="c-card__title">
+                        STEP2 - スポットの写真を撮ろう！
+                      </h3>
+                      <p>フォトスポットについたら風景の写真を撮影しよう！</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="c-card">
+                  <div class="c-card__inner">
+                    <img src="./images/howtoplay/step03.png" alt="" />
+                    <div class="c-card__content">
+                      <h3 class="c-card__title">
+                        STEP3 - 中庭のブースに戻ろう
+                      </h3>
+                      <p>
+                        たくさんのスポットを巡って写真を撮ったら、中庭のブースに戻ろう。モバイルバッテリーやイヤホン、スタバカードなどの豪華景品をゲットできるチャンス！？
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+        <footer class="l-page-footer">
+          <div class="l-page-footer__inner">
+            <button
+              type="button"
+              class="c-button--secondary c-button u-width--full"
+              id="buttonEntry"
+            >
+              <span class="c-button__label">はじめる</span>
+            </button>
+          </div>
+        </footer>
+      </div>
+    </div>
+    <script type="module" src="/src/main.tsx"></script>
+    <script>
+      const entryFlg = localStorage.getItem("entryFlg");
+      const buttonEntry = document.getElementById("buttonEntry");
+
+      buttonEntry.addEventListener("click", () => {
+        localStorage.setItem("entryFlg", "true");
+        window.location.href = "index.html";
+      });
+
+      if (entryFlg) {
+        window.location.href = "index.html";
+      }
+    </script>
+  </body>
+</html>

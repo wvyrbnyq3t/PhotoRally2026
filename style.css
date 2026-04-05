@@ -39,6 +39,7 @@
   }
 }
 .c-button--secondary {
+  background-color: #ffffff;
   border: 0.1rem solid var(--c-primary);
   color: var(--c-primary);
 
@@ -148,7 +149,7 @@
     .stampCard__content {
       display: grid block;
       grid-template-columns: repeat(3, 1fr);
-      grid-template-rows: repeat(3, 1fr);
+      grid-template-rows: repeat(2, 1fr);
       gap: var(--pdng-sm);
 
       .stamp {

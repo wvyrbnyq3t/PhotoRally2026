@@ -113,11 +113,14 @@ body {
   z-index: 2;
 
   .l-page-footer__inner {
-    display: grid block;
-    grid-template-columns: repeat(2, 1fr);
-    gap: var(--pdng-md);
     padding: var(--pdng-md);
   }
+}
+
+.l-grid--2 {
+  display: grid block;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--pdng-md);
 }
 
 .l-section {
