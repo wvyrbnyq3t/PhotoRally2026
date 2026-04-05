@@ -25,32 +25,50 @@
   <body>
     <div class="l-page">
       <div class="l-page__inner">
+        <div class="l-modal" id="modal">
+          <div class="l-modal__overlay"></div>
+          <div class="l-modal__inner">
+            <div class="stampCard">
+              <div class="stampCard__inner">
+                <p class="stampCard__title">スタンプカード</p>
+                <div class="stampCard__content">
+                  <span class="stamp">1</span>
+                  <span class="stamp">2</span>
+                  <span class="stamp">3</span>
+                  <span class="stamp">4</span>
+                  <span class="stamp">5</span>
+                  <span class="stamp">6</span>
+                  <span class="stamp">7</span>
+                  <span class="stamp">8</span>
+                  <span class="stamp">9</span>
+                </div>
+                <button
+                  type="button"
+                  class="c-button c-button--secondary u-width--full"
+                  id="closeModal"
+                >
+                  <span class="c-button__label">閉じる</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
         <main class="l-page-content">
           <div class="l-page-content__inner">
             <div class="l-section">
-              <div class="l-section__inner">
-                <div class="stampCard">
-                  <div class="stampCard__inner">
-                    <p class="stampCard__title">スタンプカード</p>
-                    <div class="stampCard__content">
-                      <span class="stamp">1</span>
-                      <span class="stamp">2</span>
-                      <span class="stamp">3</span>
-                      <span class="stamp">4</span>
-                      <span class="stamp">5</span>
-                      <span class="stamp">6</span>
-                      <span class="stamp">7</span>
-                      <span class="stamp">8</span>
-                      <span class="stamp">9</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              <div class="l-section__inner"></div>
             </div>
           </div>
         </main>
         <footer class="l-page-footer">
           <div class="l-page-footer__inner">
+            <button
+              type="button"
+              class="c-button--secondary c-button u-width--full"
+              id="openModal"
+            >
+              <span class="c-button__label">スタンプカード</span>
+            </button>
             <a href="" class="c-button--primary c-button u-width--full">
               <span class="c-icon c-button__icon">photo_camera</span>
               <span class="c-button__label">撮影完了！</span>
@@ -62,6 +80,16 @@
     <script type="module" src="/src/main.tsx"></script>
     <script>
       const entryFlg = localStorage.getItem("entryFlg");
+      const modal = document.getElementById("modal");
+      const openModal = document.getElementById("openModal");
+      const closeModal = document.getElementById("closeModal");
+
+      openModal.addEventListener("click", () => {
+        modal.classList.add("is-active");
+      });
+      closeModal.addEventListener("click", () => {
+        modal.classList.remove("is-active");
+      });
 
       if (!entryFlg) {
         window.location.href = "entry.html";

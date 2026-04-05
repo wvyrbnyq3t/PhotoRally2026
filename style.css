@@ -208,3 +208,37 @@
   padding: 0.5em 3em;
   margin-left: auto;
 }
+
+.l-modal {
+  display: none;
+  height: 100svh;
+  width: 100svw;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+
+  &.is-active {
+    display: block;
+  }
+
+  .l-modal__overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+  }
+  .l-modal__inner {
+    height: fit-content;
+    width: calc(min(100%, var(--w-pc)) - 3.2rem);
+    max-height: 100svh;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
